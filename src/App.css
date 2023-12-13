@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'swiper/swiper-bundle.css';
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+.animate-typing {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  width: 0; /* Start with the width of the element at 0 */
+  animation: typing 3.5s steps(40, end) forwards, blink-caret .75s step-end infinite;
+  /* Adjust the number of steps (40) to match the number of characters in your string */
+}
+
+
+/* Navbar Stay */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #000000;
+}
+
+.sticky + div {
+  background-color: #000000; /* Change this to the color you want */
+  min-height: 100vh; /* Change this to the minimum height you want */
+}
+
+/* White */
+/* .glassy {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+} */
+
+/* Dark */
+.glassy {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+}
+
+/* Navbar Scroll Up Show */
+.show {
+  transition: top 0.3s;
+  top: 0;
+}
+
+/* Navbar Scroll Down Hide */
+.hide {
+  transition: top 0.3s;
+  top: -100%;
+}
+
+.uniform-image {
+  width: 800px;  /* Adjust this value */
+  height: 400px; /* Adjust this value */
+  object-fit: cover;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.activeSlide {
+  transform: scale(1.2);
+  transition: transform .3s;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
